@@ -44,7 +44,7 @@ public class Config {
         }
 
         @ServiceActivator(inputChannel = "toEcho")
-        public String upCase(Message message) {
+        public String createResponse(Message message) {
             StringTokenizer st = new StringTokenizer(message.getMessage(), "\t\n\r,. ");
             if (st.countTokens() > 1) {
                 return "Ho-ho-ho, happy day";
